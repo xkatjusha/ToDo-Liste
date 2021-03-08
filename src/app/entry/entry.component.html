@@ -1,0 +1,6 @@
+<h4>{{todo1.name}}</h4>
+  <div>
+    <app-output [entry]="todoentry" [list]="todo1.list" *ngFor="let todoentry of todo1.list; index as i" [position]="i"></app-output>
+    <input type="text" (keydown.enter)="add()" placeholder="To-Do" name="records" [(ngModel)]="records" #newrecords>
+    <span class="add" (click)="add()">➕</span>
+  </div>
